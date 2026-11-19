@@ -5,7 +5,7 @@
 > **Severity:** Medium · **CVSS 3.1:** 4.8 — `AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N`
 > **CWE:** CWE-79 (Stored XSS)
 > **Status:** Unpatched
-> **Vendor notified:** 2026-11-19 — [modified-shop/modified-shop#ISSUE](https://github.com/modified-shop/modified-shop/issues/ISSUE)
+> **Vendor notified:** 2026-11-19 — [modified-shop/modified-shop#3781](https://github.com/modified-shop/modified-shop/issues/3781)
 
 ---
 
@@ -67,7 +67,7 @@ echo htmlspecialchars($news_data[$i]['title'], ENT_QUOTES, 'UTF-8');
 
 ## References
 
-- Vendor notification: (issue link added on submission)
+- Vendor notification: https://github.com/modified-shop/modified-shop/issues/3781
 - CWE-79: https://cwe.mitre.org/data/definitions/79.html
 - Vendor repository: https://github.com/modified-shop/modified-shop
 
