@@ -10,7 +10,9 @@ UA="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
 # 1. Login as admin, capture session
 SID=$(curl -s -c /tmp/c_v20.txt -b /tmp/c_v20.txt -H "User-Agent: $UA" \
   -X POST "$TARGET/admin/login.php?action=process" \
-  -d "username=$ADMIN_USER&password=$ADMIN_PASS&redirect=" \
+  --data-urlencode "username=$ADMIN_USER" \
+  --data-urlencode "password=$ADMIN_PASS" \
+  --data-urlencode "redirect=" \
   -D - -o /dev/null 2>/dev/null | grep -i "set-cookie.*MODsid" | \
   grep -oP '(?<=MODsid=)[^;]+' | head -1)
 [ -z "$SID" ] && { echo "[-] login failed"; exit 1; }
